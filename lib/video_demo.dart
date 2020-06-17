@@ -1,5 +1,5 @@
-import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttervideodemo/chewiePlayer/chewie_player.dart';
 import 'package:video_player/video_player.dart';
 
 
@@ -29,7 +29,7 @@ class _VideoDemoPageState extends State<VideoDemoPage> {
       print("seconds $seconds");
       if(seconds == 5){
         setState(() {
-
+          _visible = true;
         });
       }
     });
@@ -84,7 +84,7 @@ class _VideoDemoPageState extends State<VideoDemoPage> {
                 child: InkWell(
                   onTap: (){
                     setState(() {
-                      _visible = true;
+                      _visible = false;
                       print("visible");
                     });
                   },
@@ -115,18 +115,25 @@ class _VideoDemoPageState extends State<VideoDemoPage> {
   Widget getWidget(){
     return Visibility(
       visible: _visible,
-      child: Container(
-        height: 80.0,
-        width: 150.0,
-        padding: EdgeInsets.symmetric(horizontal: 16.0,vertical: 10.0),
-        decoration: BoxDecoration(
-            color: Colors.grey[500]
-        ),
-        child: Text(
-          'some answer available at this time',
-          style: TextStyle(
-              fontSize: 16.0,
-              color: Colors.black
+      child: InkWell(
+        onTap: (){
+          setState(() {
+            _visible = !_visible;
+          });
+        },
+        child: Container(
+          height: 80.0,
+          width: 150.0,
+          padding: EdgeInsets.symmetric(horizontal: 16.0,vertical: 10.0),
+          decoration: BoxDecoration(
+              color: Colors.grey[500]
+          ),
+          child: Text(
+            'some answer available at this time',
+            style: TextStyle(
+                fontSize: 16.0,
+                color: Colors.black
+            ),
           ),
         ),
       ),

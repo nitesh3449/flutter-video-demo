@@ -24,9 +24,10 @@ class MyApp extends StatelessWidget {
 
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: VideoModel(
-        type: "",
-      ),
+//      home: VideoModel(
+//        type: "",
+//      ),
+      home: VideoDemoPage(),
       debugShowCheckedModeBanner: false,
     );
   }

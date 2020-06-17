@@ -35,12 +35,13 @@ dependencies:
   intl: ^0.16.0
   permission_handler: ^4.0.0
   thumbnails: ^1.0.1
-  chewie: ^0.9.8+1
+#  chewie: ^0.9.8+1
   video_player: ^0.10.5+1
   countdown: ^0.1.0
   app_review: ^1.0.0
   percent_indicator: ^2.1.1+1
-
+  open_iconic_flutter: ">=0.3.0 <0.4.0"
+  wakelock: ">=0.1.2 <0.2.0"
 
 dev_dependencies:
   flutter_test:
